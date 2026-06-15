@@ -286,3 +286,7 @@ app.post('/api/semantic-search', async (req, res) => {
 app.listen(PORT, () => {
   console.log(`Node.js MongoDB Microservice is running on port ${PORT}`);
 });
+// Root health check route
+app.get('/', (req, res) => {
+  res.status(200).json({ status: "online", message: "TaskWorkFlow MongoDB Microservice is running." });
+});
